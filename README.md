@@ -1,2 +1,2 @@
 # hello-ci
-First pipeline following along with CI documentation
+First CI pipeline following along with CircleCI documentation
