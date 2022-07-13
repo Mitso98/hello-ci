@@ -44,3 +44,7 @@ workflows:
   show_info: 
     jobs:
       - git_info
+
+  print_vars:
+    jobs:
+      - test_env_vars
