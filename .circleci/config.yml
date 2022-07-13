@@ -20,8 +20,8 @@ jobs:
     docker: 
       - image: circleci/node:13.8.0
     steps:
-      - run: << pipeline.project.git_url >>
-      - run: << pipeline.git.branch >>
+      - run: echo << pipeline.project.git_url >>
+      - run: echo << pipeline.git.branch >>
 
 workflows:
   # Name the workflow "welcome"
