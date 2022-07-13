@@ -16,6 +16,13 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - run: echo world
+  git_info:
+    docker: 
+      - image: circleci/node:13.8.0
+    steps:
+      - run: pipeline.project.git_url
+      - run: pipeline.git.branch
+
 workflows:
   # Name the workflow "welcome"
   welcome:
@@ -25,3 +32,7 @@ workflows:
       - print_world:
           requires:
             - print_hello
+
+  show_info: 
+    jobs:
+      - git_info
