@@ -1,4 +1,6 @@
 #! /bin/bash
+message=$1
 git add .
-git commit -m "automatic push"
+git commit -m "$1"
+
 
