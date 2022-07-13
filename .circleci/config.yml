@@ -11,17 +11,25 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - run: echo hello
+
   print_world:
     docker:
       - image: circleci/node:13.8.0
     steps:
       - run: echo world
+
   git_info:
     docker: 
       - image: circleci/node:13.8.0
     steps:
       - run: echo << pipeline.project.git_url >>
       - run: echo << pipeline.git.branch >>
+
+  test_env_vars:
+    docker: 
+      - image: circleci/node:13.8.0
+    steps:
+      - run: echo $NAME_VAR
 
 workflows:
   # Name the workflow "welcome"
